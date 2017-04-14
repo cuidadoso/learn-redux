@@ -1,9 +1,19 @@
-// External dependencies
+// external dependencies
 import React from 'react';
 import { render } from 'react-dom';
-// CSS Styles
+import { Router, Route, IndexRoute, browserHistory } from 'react-router';
+// css styles
 import css from './styles/style.styl';
-// Project dependencies
-import { Main } from './components';
+// components
+import { Main, Single, PhotoGrid } from './components';
 
-render(<Main/>, document.getElementById('root'));
+const router = (
+  <Router history={browserHistory}>
+    <Route path='/' component={Main}>
+      <IndexRoute component={PhotoGrid}/>
+      <Route path='/view/:postId' component={Single}/>
+    </Route>
+  </Router>
+);
+
+render(router, document.getElementById('root'));
