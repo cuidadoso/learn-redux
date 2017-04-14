@@ -6,7 +6,9 @@ import React, { Component } from 'react';
 class Single extends Component {
   render() {
     return (
-      <h1>Single component</h1>
+      <div className='single-photo' >
+          Single
+      </div>
     );
   }
 }

@@ -6,7 +6,9 @@ import React, { Component } from 'react';
 class PhotoGrid extends Component {
   render() {
     return (
-      <h1>PhotoGrid component</h1>
+      <div className='photo-grid'>
+          PhotoGrid
+      </div>
     );
   }
 }
