@@ -156,7 +156,7 @@
     "indent": [2, 2, { "SwitchCase": 1 }],
     "jsx-quotes": [2, "prefer-single"],
     "linebreak-style": [2, "unix"],
-    "max-len": [2, 128, 4, {
+    "max-len": [2, 256, 4, {
       "ignoreUrls": true,
       "ignoreComments": false,
       "ignorePattern": "^\\s*(const|let|var)\\s+\\w+\\s+\\=\\s+\\/.*\\/(|i|g|m|ig|im|gm|igm);?$"

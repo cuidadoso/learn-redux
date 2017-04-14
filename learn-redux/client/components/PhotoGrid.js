@@ -1,6 +1,7 @@
 /**
  * Created by apyreev on 14-Apr-17.
  */
+// external dependencies
 import React, { Component } from 'react';
 
 class PhotoGrid extends Component {
