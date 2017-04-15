@@ -7,12 +7,12 @@ import store, { history } from './store';
 // css styles
 import css from './styles/style.styl';
 // components
-import { Main, Single, PhotoGrid } from './components';
+import { App, Single, PhotoGrid } from './components';
 
 const router = (
   <Provider store={store}>
     <Router history={history}>
-      <Route path='/' component={Main}>
+      <Route path='/' component={App}>
         <IndexRoute component={PhotoGrid}/>
         <Route path='/view/:postId' component={Single}/>
       </Route>
