@@ -128,7 +128,7 @@
     "no-shadow": 2,
     "no-undef-init": 2,
     "no-undef": 2,
-    "no-unused-vars": 2,
+    "no-unused-vars": 1,
 
     // Node.js
     "callback-return": 2,
@@ -155,7 +155,7 @@
     "func-style": [2, "declaration"],
     "indent": [2, 2, { "SwitchCase": 1 }],
     "jsx-quotes": [2, "prefer-single"],
-    "linebreak-style": [2, "unix"],
+    "linebreak-style": [2, "windows"],
     "max-len": [2, 256, 4, {
       "ignoreUrls": true,
       "ignoreComments": false,
@@ -231,7 +231,7 @@
         "render"
       ]
     }],
-    "react/jsx-wrap-multilines": 2,
+    "react/jsx-wrap-multilines": 0,
 
     // Legacy
     "max-depth": [0, 4],
