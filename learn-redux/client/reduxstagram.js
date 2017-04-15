@@ -1,4 +1,3 @@
-/*eslint linebreak-style:0*/
 // external dependencies
 import React from 'react';
 import { render } from 'react-dom';
