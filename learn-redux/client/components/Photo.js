@@ -2,6 +2,7 @@
  * Created by Alejandro on 15.04.2017.
  */
 // external dependencies
+// TODO Implement propTypes
 import React, { Component } from 'react';
 import { Link } from 'react-router';
 import CSSTransitionGroup from 'react-addons-css-transition-group';
