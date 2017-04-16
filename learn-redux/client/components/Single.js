@@ -3,20 +3,22 @@
  */
 // external dependencies
 import React, { Component } from 'react';
-import Photo from "./Photo";
-import Comments from "./Comments";
+import Photo from './Photo';
+import Comments from './Comments';
 
 // import comments
 class Single extends Component {
   render() {
-    const { posts, params } = this.props;
-    const i = posts.findIndex((post) => post.code === params.postId);
+    const { postId } = this.props.params;
+    const { posts, comments } = this.props;
+    const i = posts.findIndex((post) => post.code === postId);
     const post = posts[i];
+    const postComments = comments[postId];
 
     return (
       <div className='single-photo' >
         <Photo i={i} post={post} {...this.props} />
-        <Comments/>
+        <Comments postComponents={postComments}/>
       </div>
     );
   }
