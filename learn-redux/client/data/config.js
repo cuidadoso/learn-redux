@@ -1,7 +1,7 @@
 import Raven from 'raven-js';
 
-const sentryKey = 'cb55d4f05cd443ce82303222f77ef5e0';
-const sentryApp = '61499';
+const sentryKey = '18921707e2284bb08387b3d13a009b06';
+const sentryApp = '158728';
 
 export const sentryUrl = `https://${sentryKey}@app.getsentry.com/${sentryApp}`;
 
