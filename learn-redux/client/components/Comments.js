@@ -12,6 +12,7 @@ class Comments extends Component {
     const comment = this.refs.comment.value;
 
     this.props.addComment(postId, author, comment);
+    this.refs.commentForm.reset();
   }
 
   renderComment(comment, i) {
@@ -20,7 +21,10 @@ class Comments extends Component {
         <p>
           <strong>{comment.user}</strong>
           {comment.text}
-          <button className='remove-comment'>&times;</button>
+          <button className='remove-comment'
+                  onClick={this.props.removeComment.bind(null, this.props.params.postId, i)}>
+            &times;
+          </button>
         </p>
       </div>
     );
@@ -29,7 +33,7 @@ class Comments extends Component {
   render() {
     return (
       <div className='comment'>
-        { this.props.postComponents.map(this.renderComment) }
+        { this.props.postComponents.map(this.renderComment.bind(this)) }
         <form ref='commentForm' className='comment-form' onSubmit={this.handleSubmit.bind(this)}>
           <input type='text' ref='author' placeholder='author'/>
           <input type='text' ref='comment' placeholder='comment'/>
