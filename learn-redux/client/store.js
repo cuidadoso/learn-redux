@@ -19,4 +19,11 @@ const defaultState = {
 const store = createStore(rootReducer, defaultState);
 
 export const history = syncHistoryWithStore(browserHistory, store);
+// TODO integration hot reloading with WebStorm.
+if (module.hot) {
+  module.hot.accept('./reducers', () => {
+    store.replaceReducer(rootReducer);
+  });
+}
+
 export default store;
