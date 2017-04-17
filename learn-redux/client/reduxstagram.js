@@ -1,14 +1,14 @@
 // external dependencies
 import React from 'react';
 import { render } from 'react-dom';
-import { Router, Route, IndexRoute, browserHistory } from 'react-router';
+import { Router, Route, IndexRoute } from 'react-router';
 // redux store dependencies
 import { Provider } from 'react-redux';
 import store, { history } from './store';
 // css styles
 import css from './styles/style.styl';
 // components
-import { App, Single, PhotoGrid } from './components';
+import { Main, Single, PhotoGrid } from './components';
 // error tracking
 import Raven from 'raven-js';
 import { sentryUrl, logException } from './data/config';
@@ -32,7 +32,7 @@ console.log(store.doesNot.nope());*/
 const router = (
   <Provider store={store}>
     <Router history={history}>
-      <Route path='/' component={App}>
+      <Route path='/' component={Main}>
         <IndexRoute component={PhotoGrid}/>
         <Route path='/view/:postId' component={Single}/>
       </Route>
